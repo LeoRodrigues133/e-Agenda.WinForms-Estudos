@@ -21,6 +21,7 @@ public partial class TelaPrincipalForm : Form
         repositorioContato = new RepositorioContato();
         repositorioCompromisso = new RepositorioCompromisso();
         Instancia = this;
+        IniciarRegistros();
 
     }
 
@@ -66,7 +67,7 @@ public partial class TelaPrincipalForm : Form
 
     private void btnFiltrar_Click(object sender, EventArgs e)
     {
-        if(controlador is IControladorFiltravel controladorFiltravel)
+        if (controlador is IControladorFiltravel controladorFiltravel)
             controladorFiltravel.Filtrar();
     }
 
@@ -103,6 +104,63 @@ public partial class TelaPrincipalForm : Form
             btnExcluir.ToolTipText = controladorSelecionado.TooltipExcluir;
         }
 
+    }
+
+    private void IniciarRegistros()
+    {
+        List<Contato> Contatos = new List<Contato>(){
+         new Contato(
+             "Leonardo Rodrigues",
+             "(49)9 9807-6236",
+             "lthkrieger@gmail.com",
+             "Ndd",
+             "Dev Junior"
+
+             ),
+
+        new Contato(
+            "Teste",
+            "(49)9 9999-9999",
+            "teste@gmail.com",
+            "teste",
+            "teste"
+
+            )
+        };
+
+        repositorioContato.CadastrarMultiplosRegistros(Contatos);
+
+        List<Compromisso> Compromissos = new List<Compromisso>()
+{
+    new Compromisso(
+        "Reunião de Planejamento",
+        new DateTime(2025, 2, 14),
+        new TimeSpan(10, 0, 0),
+        new TimeSpan(11, 30, 0),
+        false,null,"Discord"
+
+    ),
+
+    new Compromisso(
+        "Almoço com Cliente",
+        new DateTime(2025, 2, 15),
+        new TimeSpan(12, 30, 0),
+        new TimeSpan(14, 0, 0),
+        true,repositorioContato.SelecionarPorId(2),
+        "Hamgourmet Hamburgueria"
+    ),
+
+    new Compromisso(
+        "Apresentação de Projeto",
+        new DateTime(2025, 2, 16),
+        new TimeSpan(15, 0, 0),
+        new TimeSpan(16, 30, 0),
+        true,
+        repositorioContato.SelecionarPorId(1),
+        "Auditório da Empresa"
+    )
+    };
+        repositorioCompromisso.CadastrarMultiplosRegistros(Compromissos);
     }
 
 }

@@ -1,9 +1,17 @@
-﻿namespace eAgenda.WinApp.Compartilhado;
+﻿using eAgenda.WinApp.ModuloContatos;
+
+namespace eAgenda.WinApp.Compartilhado;
 public abstract class RepositorioBase<T> where T : EntidadeBase
 {
     protected List<T> registros = new List<T>();
 
     protected int contadorId = 1;
+
+    public void CadastrarMultiplosRegistros(List<T> registros)
+    {
+        foreach(T entidade in registros) 
+            Cadastrar(entidade);
+    }
 
     public void Cadastrar(T novoRegistro)
     {

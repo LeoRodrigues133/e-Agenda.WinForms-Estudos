@@ -53,5 +53,10 @@ public class Contato : EntidadeBase
 
     public override string ToString()
     {
-        return $"Id: {Id}, Nome: {Nome}, Telefone: {Telefone}, Email: {Email}, Empresa: {Empresa}, Cargo: {Cargo}";
+        return $"Id: {Id}" +
+            $", Nome: {Nome}" +
+            $", Telefone: {Telefone}" +
+            $", Email: {Email}" +
+            $", Empresa: {Empresa}" +
+            $", Cargo: {Cargo}";
     }}

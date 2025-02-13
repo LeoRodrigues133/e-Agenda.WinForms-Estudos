@@ -105,12 +105,7 @@ public class ControladorContato : ControladorBase
     public override UserControl ObterListagem()
     {
         if (ListagemContatos == null)
-        {
             ListagemContatos = new ListagemContatoControl();
-
-            if (RepositorioContato.SelecionarTodos().Count() <= 0)
-                CadastrarContato();
-        }
 
         CarregarContatos();
 
@@ -126,14 +121,5 @@ public class ControladorContato : ControladorBase
         ListagemContatos.AtualizarContatos(contatos);
     }
 
-    private void CadastrarContato()
-    {
 
-        Contato contato1 = new Contato("Leonardo Rodrigues", "(49)9 9807-6236", "lthkrieger@gmail.com", "Ndd", "Dev Junior");
-        Contato contato2 = new Contato("Teste", "4999999999", "teste@gmail.com", "teste", "teste");
-
-        RepositorioContato.Cadastrar(contato1);
-        RepositorioContato.Cadastrar(contato2);
-
-    }
 }
