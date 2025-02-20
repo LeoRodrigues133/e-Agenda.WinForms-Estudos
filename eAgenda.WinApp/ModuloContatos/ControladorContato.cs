@@ -4,7 +4,7 @@ namespace eAgenda.WinApp.ModuloContatos;
 public class ControladorContato : ControladorBase
 {
     RepositorioContato RepositorioContato;
-    ListagemContatoControl ListagemContatos;
+    TabelaContatoControl TabelaContatos;
 
     public ControladorContato(RepositorioContato repositorioContato)
     {
@@ -47,7 +47,9 @@ public class ControladorContato : ControladorBase
     {
         TelaContatoForm telaContato = new TelaContatoForm();
 
-        Contato contatoSelecionado = ListagemContatos.ObterContatoSelecionado();
+        int idSelecionado = TabelaContatos.ObterContatoSelecionado();
+
+        Contato contatoSelecionado = RepositorioContato.SelecionarPorId(idSelecionado);
 
         if (contatoSelecionado == null)
             return;
@@ -77,7 +79,9 @@ public class ControladorContato : ControladorBase
 
     public override void Excluir()
     {
-        Contato contatoSelecionado = ListagemContatos.ObterContatoSelecionado();
+        int idSelecionado = TabelaContatos.ObterContatoSelecionado();
+
+        Contato contatoSelecionado = RepositorioContato.SelecionarPorId(idSelecionado);
 
         if (contatoSelecionado == null)
             return;
@@ -104,12 +108,12 @@ public class ControladorContato : ControladorBase
 
     public override UserControl ObterListagem()
     {
-        if (ListagemContatos == null)
-            ListagemContatos = new ListagemContatoControl();
+        if (TabelaContatos == null)
+            TabelaContatos = new TabelaContatoControl();
 
         CarregarContatos();
 
-        return ListagemContatos;
+        return TabelaContatos;
     }
 
     private void CarregarContatos()
@@ -118,7 +122,7 @@ public class ControladorContato : ControladorBase
 
         TelaPrincipalForm.Instancia.AtualizarRodape($"Visualizando {contatos.Count()} registro(s).");
 
-        ListagemContatos.AtualizarContatos(contatos);
+        TabelaContatos.AtualizarContatos(contatos);
     }
 
 

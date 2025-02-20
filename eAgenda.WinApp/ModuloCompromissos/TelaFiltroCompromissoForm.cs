@@ -40,4 +40,5 @@ public partial class TelaFiltroCompromissoForm : Form
             dtFiltroTermino.Enabled = false;
         }
     }
+
 }

@@ -73,6 +73,26 @@ namespace eAgenda.WinApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap btnAdicionarTask {
+            get {
+                object obj = ResourceManager.GetObject("btnAdicionarTask", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap btnAtualizarTask {
+            get {
+                object obj = ResourceManager.GetObject("btnAtualizarTask", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap btnDelete {
             get {
                 object obj = ResourceManager.GetObject("btnDelete", resourceCulture);

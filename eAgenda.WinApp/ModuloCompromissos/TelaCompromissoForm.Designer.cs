@@ -54,7 +54,7 @@ partial class TelaCompromissoForm
         // 
         btnSalvar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         btnSalvar.DialogResult = DialogResult.OK;
-        btnSalvar.Location = new Point(111, 558);
+        btnSalvar.Location = new Point(246, 526);
         btnSalvar.Name = "btnSalvar";
         btnSalvar.Size = new Size(100, 40);
         btnSalvar.TabIndex = 13;
@@ -66,7 +66,7 @@ partial class TelaCompromissoForm
         // 
         btnCancelar.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         btnCancelar.DialogResult = DialogResult.Cancel;
-        btnCancelar.Location = new Point(217, 558);
+        btnCancelar.Location = new Point(352, 526);
         btnCancelar.Name = "btnCancelar";
         btnCancelar.Size = new Size(100, 40);
         btnCancelar.TabIndex = 14;
@@ -77,7 +77,7 @@ partial class TelaCompromissoForm
         // 
         label1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         label1.AutoSize = true;
-        label1.Location = new Point(230, 72);
+        label1.Location = new Point(228, 70);
         label1.Name = "label1";
         label1.Size = new Size(25, 20);
         label1.TabIndex = 0;
@@ -87,7 +87,7 @@ partial class TelaCompromissoForm
         // 
         txtId.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         txtId.Enabled = false;
-        txtId.Location = new Point(261, 69);
+        txtId.Location = new Point(259, 67);
         txtId.Name = "txtId";
         txtId.Size = new Size(136, 27);
         txtId.TabIndex = 1;
@@ -97,7 +97,7 @@ partial class TelaCompromissoForm
         // 
         label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         label2.AutoSize = true;
-        label2.Location = new Point(69, 102);
+        label2.Location = new Point(67, 100);
         label2.Name = "label2";
         label2.Size = new Size(64, 20);
         label2.TabIndex = 2;
@@ -106,7 +106,7 @@ partial class TelaCompromissoForm
         // txtAssunto
         // 
         txtAssunto.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-        txtAssunto.Location = new Point(69, 125);
+        txtAssunto.Location = new Point(67, 123);
         txtAssunto.Name = "txtAssunto";
         txtAssunto.Size = new Size(328, 27);
         txtAssunto.TabIndex = 3;
@@ -115,7 +115,7 @@ partial class TelaCompromissoForm
         // 
         label4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         label4.AutoSize = true;
-        label4.Location = new Point(69, 155);
+        label4.Location = new Point(67, 153);
         label4.Name = "label4";
         label4.Size = new Size(44, 20);
         label4.TabIndex = 4;
@@ -125,7 +125,7 @@ partial class TelaCompromissoForm
         // 
         dtData.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         dtData.Format = DateTimePickerFormat.Short;
-        dtData.Location = new Point(69, 178);
+        dtData.Location = new Point(67, 176);
         dtData.Name = "dtData";
         dtData.Size = new Size(165, 27);
         dtData.TabIndex = 5;
@@ -134,7 +134,7 @@ partial class TelaCompromissoForm
         // 
         label3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         label3.AutoSize = true;
-        label3.Location = new Point(69, 208);
+        label3.Location = new Point(67, 206);
         label3.Name = "label3";
         label3.Size = new Size(48, 20);
         label3.TabIndex = 6;
@@ -145,7 +145,7 @@ partial class TelaCompromissoForm
         dtHoraInicio.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         dtHoraInicio.CustomFormat = "HH:mm";
         dtHoraInicio.Format = DateTimePickerFormat.Custom;
-        dtHoraInicio.Location = new Point(69, 231);
+        dtHoraInicio.Location = new Point(67, 229);
         dtHoraInicio.Name = "dtHoraInicio";
         dtHoraInicio.Size = new Size(142, 27);
         dtHoraInicio.TabIndex = 7;
@@ -154,7 +154,7 @@ partial class TelaCompromissoForm
         // 
         label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         label5.AutoSize = true;
-        label5.Location = new Point(255, 208);
+        label5.Location = new Point(253, 206);
         label5.Name = "label5";
         label5.Size = new Size(66, 20);
         label5.TabIndex = 8;
@@ -165,7 +165,7 @@ partial class TelaCompromissoForm
         dtHoraTermino.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         dtHoraTermino.CustomFormat = "HH:mm";
         dtHoraTermino.Format = DateTimePickerFormat.Custom;
-        dtHoraTermino.Location = new Point(255, 231);
+        dtHoraTermino.Location = new Point(253, 229);
         dtHoraTermino.Name = "dtHoraTermino";
         dtHoraTermino.Size = new Size(142, 27);
         dtHoraTermino.TabIndex = 9;
@@ -174,7 +174,7 @@ partial class TelaCompromissoForm
         // 
         chkboxContato.Anchor = AnchorStyles.Top | AnchorStyles.Right;
         chkboxContato.AutoSize = true;
-        chkboxContato.Location = new Point(69, 291);
+        chkboxContato.Location = new Point(67, 289);
         chkboxContato.Name = "chkboxContato";
         chkboxContato.Size = new Size(215, 24);
         chkboxContato.TabIndex = 10;
@@ -186,7 +186,7 @@ partial class TelaCompromissoForm
         // 
         cmbBoxContato.DropDownStyle = ComboBoxStyle.DropDownList;
         cmbBoxContato.FormattingEnabled = true;
-        cmbBoxContato.Location = new Point(118, 321);
+        cmbBoxContato.Location = new Point(118, 319);
         cmbBoxContato.Name = "cmbBoxContato";
         cmbBoxContato.Size = new Size(231, 28);
         cmbBoxContato.TabIndex = 11;
@@ -197,7 +197,7 @@ partial class TelaCompromissoForm
         groupBox1.Controls.Add(rdbPresencial);
         groupBox1.Controls.Add(txtRemoto);
         groupBox1.Controls.Add(rdbRemoto);
-        groupBox1.Location = new Point(69, 388);
+        groupBox1.Location = new Point(69, 386);
         groupBox1.Name = "groupBox1";
         groupBox1.Size = new Size(328, 132);
         groupBox1.TabIndex = 12;
@@ -245,7 +245,7 @@ partial class TelaCompromissoForm
         // 
         AutoScaleDimensions = new SizeF(8F, 20F);
         AutoScaleMode = AutoScaleMode.Font;
-        ClientSize = new Size(466, 648);
+        ClientSize = new Size(464, 585);
         Controls.Add(groupBox1);
         Controls.Add(cmbBoxContato);
         Controls.Add(chkboxContato);

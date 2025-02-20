@@ -144,7 +144,7 @@ partial class TelaFiltroCompromissoForm
         // 
         btnSalvar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
         btnSalvar.DialogResult = DialogResult.OK;
-        btnSalvar.Location = new Point(89, 216);
+        btnSalvar.Location = new Point(166, 216);
         btnSalvar.Name = "btnSalvar";
         btnSalvar.Size = new Size(100, 40);
         btnSalvar.TabIndex = 15;
@@ -156,7 +156,7 @@ partial class TelaFiltroCompromissoForm
         // 
         btnCancelar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
         btnCancelar.DialogResult = DialogResult.Cancel;
-        btnCancelar.Location = new Point(195, 216);
+        btnCancelar.Location = new Point(272, 216);
         btnCancelar.Name = "btnCancelar";
         btnCancelar.Size = new Size(100, 40);
         btnCancelar.TabIndex = 16;

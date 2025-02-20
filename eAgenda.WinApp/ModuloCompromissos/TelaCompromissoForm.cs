@@ -18,7 +18,7 @@ public partial class TelaCompromissoForm : Form
             dtHoraInicio.Text = value.HoraInicio.ToString();
             cmbBoxContato.SelectedItem = value.MarcarContato;
             dtHoraTermino.Text = value.HoraTermino.ToString();
-            rdbPresencial.Checked = value.TipoCompromisso == tipoCompromissoEnum.Presencial ;
+            rdbPresencial.Checked = value.TipoCompromisso == tipoCompromissoEnum.Remoto;
 
         }
         get => compromisso;
@@ -34,7 +34,7 @@ public partial class TelaCompromissoForm : Form
     {
         cmbBoxContato.Items.Clear();
 
-        foreach(Contato contato in contatos) 
+        foreach (Contato contato in contatos)
             cmbBoxContato.Items.Add(contato);
     }
 
@@ -73,6 +73,7 @@ public partial class TelaCompromissoForm : Form
         TimeSpan inicio = dtHoraInicio.Value.TimeOfDay;
         TimeSpan termino = dtHoraTermino.Value.TimeOfDay;
         bool marcarContato = chkboxContato.Checked;
+        tipoCompromissoEnum tipoCompromisso = rdbPresencial.Checked ? tipoCompromissoEnum.Presencial : tipoCompromissoEnum.Remoto;
         Contato? contato = (Contato)cmbBoxContato.SelectedItem!;
 
         string local =
@@ -80,7 +81,7 @@ public partial class TelaCompromissoForm : Form
             : (!string.IsNullOrEmpty(txtPresencial.Text.Trim()) ? txtPresencial.Text
              : "(Sem local definido)");
 
-        compromisso = new Compromisso(assunto, data, inicio, termino, marcarContato, contato, local);
+        compromisso = new Compromisso(assunto, data, inicio, termino, marcarContato, contato, tipoCompromisso, local);
 
         List<string> erros = compromisso.Validar();
 
@@ -92,4 +93,5 @@ public partial class TelaCompromissoForm : Form
         }
 
     }
+
 }

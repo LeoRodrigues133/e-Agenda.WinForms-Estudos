@@ -6,7 +6,7 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
 {
     RepositorioCompromisso RepositorioCompromisso { get; set; }
     RepositorioContato RepositorioContato { get; set; }
-    ListagemCompromissoControl ListagemCompromisso { get; set; }
+    TabelaCompromissoControl TabelaCompromisso { get; set; }
     public ControladorCompromisso(RepositorioCompromisso repositorioCompromisso, RepositorioContato repositorioContato)
     {
         RepositorioCompromisso = repositorioCompromisso;
@@ -57,7 +57,9 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
     {
         TelaCompromissoForm telaCompromisso = new TelaCompromissoForm();
 
-        Compromisso compromissoSelecionado = ListagemCompromisso.ObterCompromisso();
+        int idSelecionado = TabelaCompromisso.ObterCompromisso();
+
+        Compromisso compromissoSelecionado = RepositorioCompromisso.SelecionarPorId(idSelecionado);
 
         if (compromissoSelecionado == null)
             return;
@@ -87,7 +89,9 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
 
     public override void Excluir()
     {
-        Compromisso compromissoSelecionado = ListagemCompromisso.ObterCompromisso();
+        int idSelecionado = TabelaCompromisso.ObterCompromisso();
+
+        Compromisso compromissoSelecionado = RepositorioCompromisso.SelecionarPorId(idSelecionado);
 
         if (compromissoSelecionado == null)
             return;
@@ -129,7 +133,7 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
                 {
                     compromissosSelecionados = RepositorioCompromisso.SelecionarCompromissosPassados();
 
-                    ListagemCompromisso.AtualizarCompromissos(compromissosSelecionados);
+                    TabelaCompromisso.AtualizarCompromissos(compromissosSelecionados);
                     break;
                 }
 
@@ -137,7 +141,7 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
                 {
                     compromissosSelecionados = RepositorioCompromisso.SelecionarCompromissosFuturos();
 
-                    ListagemCompromisso.AtualizarCompromissos(compromissosSelecionados);
+                    TabelaCompromisso.AtualizarCompromissos(compromissosSelecionados);
 
                     break;
                 }
@@ -146,7 +150,7 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
                 {
                     compromissosSelecionados = RepositorioCompromisso.SelecionarCompromissosPorPeriodo(telaFiltroCompromisso.FiltroInicio, telaFiltroCompromisso.FiltroTermino);
 
-                    ListagemCompromisso.AtualizarCompromissos(compromissosSelecionados);
+                    TabelaCompromisso.AtualizarCompromissos(compromissosSelecionados);
 
                     break;
                 }
@@ -166,17 +170,17 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
 
         TelaPrincipalForm.Instancia.AtualizarRodape($"Visualizando {compromissos.Count()} registro(s).");
 
-        ListagemCompromisso.AtualizarCompromissos(compromissos);
+        TabelaCompromisso.AtualizarCompromissos(compromissos);
     }
 
     public override UserControl ObterListagem()
     {
-        if (ListagemCompromisso == null)
-            ListagemCompromisso = new ListagemCompromissoControl();
+        if (TabelaCompromisso == null)
+            TabelaCompromisso = new TabelaCompromissoControl();
 
         CarregarCompromissos();
 
-        return ListagemCompromisso;
+        return TabelaCompromisso;
     }
 
 }

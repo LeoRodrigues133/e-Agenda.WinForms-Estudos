@@ -10,6 +10,7 @@ public class Compromisso : EntidadeBase
                        TimeSpan horaTermino,
                        bool marcarContato,
                        Contato? contatoMarcado,
+                       tipoCompromissoEnum tipoCompromisso,
                        string local)
     {
         Assunto = assunto;
@@ -17,6 +18,7 @@ public class Compromisso : EntidadeBase
         HoraInicio = horaInicio;
         HoraTermino = horaTermino;
         MarcarContato = marcarContato;
+        TipoCompromisso = tipoCompromisso;
         ContatoMarcado = contatoMarcado;
         Local = local;
     }
