@@ -104,6 +104,11 @@ public class ControladorCompromisso : ControladorBase, IControladorFiltravel
                 MessageBoxIcon.Warning
             );
 
+        if (resposta != DialogResult.Yes)
+            return;
+
+        RepositorioCompromisso.Excluir(compromissoSelecionado.Id);
+
         TelaPrincipalForm
             .Instancia
             .AtualizarRodape($"Compromisso excluído com sucesso");

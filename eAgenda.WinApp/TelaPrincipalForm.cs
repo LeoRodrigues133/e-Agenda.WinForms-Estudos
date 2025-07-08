@@ -132,15 +132,6 @@ public partial class TelaPrincipalForm : Form
     private void IniciarRegistros()
     {
         List<Contato> Contatos = new List<Contato>(){
-         new Contato(
-             "LEONARDO Rodrigues",
-             "(49)9 9807-6236",
-             "lthkrieger@gmail.com",
-             "Ndd",
-             "Dev Junior"
-
-             ),
-
         new Contato(
             "teste",
             "(49)9 9999-9999",
@@ -167,27 +158,6 @@ public partial class TelaPrincipalForm : Form
 
     ),
 
-    new Compromisso(
-        "almoço com Cliente",
-        new DateTime(2025, 2, 15),
-        new TimeSpan(12, 30, 0),
-        new TimeSpan(14, 0, 0),
-        true,
-        repositorioContato.SelecionarPorId(2),
-        tipoCompromissoEnum.Presencial,
-        "Hamgourmet Hamburgueria"
-    ),
-
-    new Compromisso(
-        "apresentação de rojeto",
-        new DateTime(2025, 2, 16),
-        new TimeSpan(15, 0, 0),
-        new TimeSpan(16, 30, 0),
-        true,
-        repositorioContato.SelecionarPorId(1),
-        tipoCompromissoEnum.Presencial,
-        "Auditório da Empresa"
-    )
     };
         repositorioCompromisso.CadastrarMultiplosRegistros(Compromissos);
 
@@ -196,14 +166,6 @@ public partial class TelaPrincipalForm : Form
         new Tarefa(
             "Tarefa Teste",
             prioridadeEnum.Normal
-            ),
-        new Tarefa(
-            "Tarefa Teste2",
-            prioridadeEnum.Alta
-            ),
-        new Tarefa(
-            "Tarefa Teste3",
-            prioridadeEnum.Baixa
             )
     };
         repositorioTarefa.CadastrarMultiplosRegistros(tarefas);
