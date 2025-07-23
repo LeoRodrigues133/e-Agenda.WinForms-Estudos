@@ -1,5 +1,6 @@
 {
   "title": "Aplicativo de Agenda em Windows App",
   "description": "Sistema para gerenciamento de compromissos, contatos e tarefas com cadastro, atualização, remoção e visualização.",
-  "gif":"https://raw.githubusercontent.com/LeoRodrigues133/e-Agenda.WinForms-Estudos/refs/heads/master/docs/img/Apresentacao.gif"
+  "gif":"https://raw.githubusercontent.com/LeoRodrigues133/e-Agenda.WinForms-Estudos/refs/heads/master/docs/img/Apresentacao.gif",
+  "lastCommit": "configurado para portfólio"
 }
